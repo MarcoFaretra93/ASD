@@ -14,21 +14,20 @@ void addPortata(listaPortate* lp, int prezzo, string descrizione) {
 int mediaPortate(listaPortate lp) {
     int risultato=0;
     int i=0;
-    while(lp!=NULL) {
-        risultato+=lp->info.prezzo;
-        i++;
-        lp=lp->next;
-    }
+    if(lp!=NULL) {
+        while(lp!=NULL) {
+            risultato+=lp->info.prezzo;
+            i++;
+            lp=lp->next;
+        }
     risultato/=i;
-    
+    }
     return risultato;
 }
 
 void stampaPortate(listaPortate lp) {
-    printf("[");
     while(lp!=NULL) {
         printf("(%s - %d)", lp->info.descrizione, lp->info.prezzo);
         lp=lp->next;
     }
-    printf("]\n");
 }

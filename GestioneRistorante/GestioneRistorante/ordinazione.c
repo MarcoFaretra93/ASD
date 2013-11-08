@@ -52,7 +52,7 @@ void rimuoviInPosizionePrecisa(listaOrdinazione* lo, int posizione) {
         printf("La lista e' vuota.\n");
 }
 
-void rimuoviOrdinazionePerMedia(listaOrdinazione* lo, float media) {
+void rimuoviOrdinazionePerMedia(listaOrdinazione* lo, int media) {
     listaOrdinazione tmp=*lo;
     int i=1;
     
@@ -84,4 +84,13 @@ int getMediaByCod(listaOrdinazione lo, int codice) {
         printf("La lista e' vuota.\n");
     
     return risultato;
+}
+
+void stampaOrdinazioni(listaOrdinazione l) {
+    while (l!=NULL) {
+        printf("{ %d - ", l->info.codice);
+        stampaPortate(l->info.portate);
+        printf("}\n");
+        l=l->next;
+    }
 }

@@ -7,7 +7,11 @@
 int main(int argc, const char * argv[])
 {
     listaOrdinazione l;
-    listaPortate a, b, c, d, e;
+    listaPortate a=NULL, b=NULL, c=NULL, d=NULL, e=NULL;
+    
+    char risposta;
+    int codiceO, codiceP, media, i=1;
+    string descrizione;
     
     addPortata(&a, 100, "spaghetti");
     addPortata(&a, 50, "pasta");
@@ -15,7 +19,7 @@ int main(int argc, const char * argv[])
     
     addPortata(&b, 10, "pizza");
     addPortata(&b, 5, "pane");
-    addOrdinazione(&l, 1, b);
+    addOrdinazione(&l, 2, b);
     
     addPortata(&c, 20, "carne");
     addPortata(&c, 30, "bistecca");
@@ -26,15 +30,38 @@ int main(int argc, const char * argv[])
     addPortata(&d, 100, "tonno");
     addOrdinazione(&l, 4, d);
     
-    addPortata(&e, 20, "carne");
-    addPortata(&e, 30, "bistecca");
-    addOrdinazione(&l, 5, e);
+    printf("Inserire il codice dell'ordinazione: ");
+    scanf("%d", &codiceO);
     
-    printf("La media e' %d.\n", mediaPortate(a));
-    printf("La media e' %d.\n", mediaPortate(b));
-    printf("La media e' %d.\n", mediaPortate(c));
-    printf("La media e' %d.\n", mediaPortate(d));
-    printf("La media e' %d.\n", mediaPortate(e));
+    do {
+        printf("\nInserire prezzo portata numero %d: ", i);
+        scanf("%d", &codiceP);
+        
+        
+        printf("\nInserire descrizione portata: ");
+        scanf("%s", descrizione);
+        
+        addPortata(&e, codiceP, descrizione);
+        i++;
+        
+        addPortata(&e, codiceP, descrizione);
+        
+        printf("\nVuoi continuare ad inserire le portate? (Y/N): ");
+        scanf(" %c", &risposta);
+    }
+    while(risposta=='y' || risposta=='Y');
+    
+    addOrdinazione(&l, codiceO, e);
+    
+    printf("Inserire il codice di cui si vuole conoscere la media: ");
+    scanf("%d", &codiceO);
+    printf("La media e' %d.\n", getMediaByCod(l, codiceO));
+    
+    printf("Inserire la media al di sotto del quale si vuole rimuovere: ");
+    scanf("%d", &media);
+    rimuoviOrdinazionePerMedia(&l, media);
+    
+    stampaOrdinazioni(l);
     
     return 0;
 }

@@ -20,7 +20,8 @@ void addOrdinazione(listaOrdinazione*, int, listaPortate);
 int lengthLista(listaOrdinazione);
 void rimuoviInTesta(listaOrdinazione*);
 void rimuoviInPosizionePrecisa(listaOrdinazione*, int);
-void rimuoviOrdinazionePerMedia(listaOrdinazione*, float);
+void rimuoviOrdinazionePerMedia(listaOrdinazione*, int);
 int getMediaByCod(listaOrdinazione, int);
+void stampaOrdinazioni(listaOrdinazione);
 
 #endif
