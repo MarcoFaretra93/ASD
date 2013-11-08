@@ -63,5 +63,12 @@ int main(int argc, const char * argv[])
     
     stampaOrdinazioni(l);
     
+    free(l);
+    free(a);
+    free(b);
+    free(c);
+    free(d);
+    free(e);
+    
     return 0;
 }
