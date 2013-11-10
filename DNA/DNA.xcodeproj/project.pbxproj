@@ -10,7 +10,20 @@
 		6F15F45C182E1F99009E6F27 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F15F45B182E1F99009E6F27 /* main.c */; };
 		6F15F45E182E1F99009E6F27 /* DNA.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F15F45D182E1F99009E6F27 /* DNA.1 */; };
 		6F15F467182E2F41009E6F27 /* DNA.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F15F466182E2F41009E6F27 /* DNA.c */; };
+		6F70BE62182EB090004667FA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F70BE61182EB090004667FA /* XCTest.framework */; };
+		6F70BE68182EB090004667FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F70BE66182EB090004667FA /* InfoPlist.strings */; };
+		6F70BE6A182EB090004667FA /* DNA_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F70BE69182EB090004667FA /* DNA_Tests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F70BE6C182EB090004667FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F15F450182E1F99009E6F27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F15F457182E1F99009E6F27;
+			remoteInfo = DNA;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6F15F456182E1F99009E6F27 /* CopyFiles */ = {
@@ -31,6 +44,12 @@
 		6F15F45D182E1F99009E6F27 /* DNA.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DNA.1; sourceTree = "<group>"; };
 		6F15F465182E2F38009E6F27 /* DNA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNA.h; sourceTree = "<group>"; };
 		6F15F466182E2F41009E6F27 /* DNA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DNA.c; sourceTree = "<group>"; };
+		6F70BE5F182EB090004667FA /* DNA Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DNA Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F70BE61182EB090004667FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6F70BE65182EB090004667FA /* DNA Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DNA Tests-Info.plist"; sourceTree = "<group>"; };
+		6F70BE67182EB090004667FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F70BE69182EB090004667FA /* DNA_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNA_Tests.m; sourceTree = "<group>"; };
+		6F70BE6B182EB090004667FA /* DNA Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DNA Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +60,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F70BE5C182EB090004667FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F70BE62182EB090004667FA /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				6F15F45A182E1F99009E6F27 /* DNA */,
+				6F70BE63182EB090004667FA /* DNA Tests */,
+				6F70BE60182EB090004667FA /* Frameworks */,
 				6F15F459182E1F99009E6F27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6F15F458182E1F99009E6F27 /* DNA */,
+				6F70BE5F182EB090004667FA /* DNA Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +99,33 @@
 				6F15F45D182E1F99009E6F27 /* DNA.1 */,
 			);
 			path = DNA;
+			sourceTree = "<group>";
+		};
+		6F70BE60182EB090004667FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F70BE61182EB090004667FA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F70BE63182EB090004667FA /* DNA Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6F70BE69182EB090004667FA /* DNA_Tests.m */,
+				6F70BE64182EB090004667FA /* Supporting Files */,
+			);
+			path = "DNA Tests";
+			sourceTree = "<group>";
+		};
+		6F70BE64182EB090004667FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F70BE65182EB090004667FA /* DNA Tests-Info.plist */,
+				6F70BE66182EB090004667FA /* InfoPlist.strings */,
+				6F70BE6B182EB090004667FA /* DNA Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +148,24 @@
 			productReference = 6F15F458182E1F99009E6F27 /* DNA */;
 			productType = "com.apple.product-type.tool";
 		};
+		6F70BE5E182EB090004667FA /* DNA Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F70BE70182EB090004667FA /* Build configuration list for PBXNativeTarget "DNA Tests" */;
+			buildPhases = (
+				6F70BE5B182EB090004667FA /* Sources */,
+				6F70BE5C182EB090004667FA /* Frameworks */,
+				6F70BE5D182EB090004667FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F70BE6D182EB090004667FA /* PBXTargetDependency */,
+			);
+			name = "DNA Tests";
+			productName = "DNA Tests";
+			productReference = 6F70BE5F182EB090004667FA /* DNA Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +174,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Federico Ginosa";
+				TargetAttributes = {
+					6F70BE5E182EB090004667FA = {
+						TestTargetID = 6F15F457182E1F99009E6F27;
+					};
+				};
 			};
 			buildConfigurationList = 6F15F453182E1F99009E6F27 /* Build configuration list for PBXProject "DNA" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -113,9 +193,21 @@
 			projectRoot = "";
 			targets = (
 				6F15F457182E1F99009E6F27 /* DNA */,
+				6F70BE5E182EB090004667FA /* DNA Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F70BE5D182EB090004667FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F70BE68182EB090004667FA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F15F454182E1F99009E6F27 /* Sources */ = {
@@ -127,7 +219,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F70BE5B182EB090004667FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F70BE6A182EB090004667FA /* DNA_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F70BE6D182EB090004667FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F15F457182E1F99009E6F27 /* DNA */;
+			targetProxy = 6F70BE6C182EB090004667FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F70BE66182EB090004667FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F70BE67182EB090004667FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6F15F45F182E1F99009E6F27 /* Debug */ = {
@@ -212,6 +331,40 @@
 			};
 			name = Release;
 		};
+		6F70BE6E182EB090004667FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNA Tests/DNA Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DNA Tests/DNA Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6F70BE6F182EB090004667FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DNA Tests/DNA Tests-Prefix.pch";
+				INFOPLIST_FILE = "DNA Tests/DNA Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -232,6 +385,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6F70BE70182EB090004667FA /* Build configuration list for PBXNativeTarget "DNA Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F70BE6E182EB090004667FA /* Debug */,
+				6F70BE6F182EB090004667FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

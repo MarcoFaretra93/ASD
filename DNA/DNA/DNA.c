@@ -135,11 +135,11 @@ int matchDNA(DNA l1, DNA l2) {
     if(lunghezzaDNA(l1)==lunghezzaDNA(l2)) {
         while(l1!=NULL && l2!=NULL && dev==1) {
             if(
-               (l1->info=='A' && l2->info=='T') ||
-               (l1->info=='T' && l2->info=='A') ||
-               (l1->info=='G' && l2->info=='C') ||
-               (l1->info=='C' && l2->info=='G'))
-                dev=1;
+               (l1->info=='A' && l2->info!='T') ||
+               (l1->info=='T' && l2->info!='A') ||
+               (l1->info=='G' && l2->info!='C') ||
+               (l1->info=='C' && l2->info!='G'))
+                dev=0;
             l1=l1->next;
             l2=l2->next;
         }

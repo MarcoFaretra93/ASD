@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F15F457182E1F99009E6F27"
-               BuildableName = "DNA"
-               BlueprintName = "DNA"
-               ReferencedContainer = "container:DNA.xcodeproj">
+               BlueprintIdentifier = "6F38180A182F67FA000AA6D5"
+               BuildableName = "ElezioniAmericane"
+               BlueprintName = "ElezioniAmericane"
+               ReferencedContainer = "container:ElezioniAmericane.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F70BE5E182EB090004667FA"
-               BuildableName = "DNA Tests.xctest"
-               BlueprintName = "DNA Tests"
-               ReferencedContainer = "container:DNA.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F15F457182E1F99009E6F27"
-            BuildableName = "DNA"
-            BlueprintName = "DNA"
-            ReferencedContainer = "container:DNA.xcodeproj">
+            BlueprintIdentifier = "6F38180A182F67FA000AA6D5"
+            BuildableName = "ElezioniAmericane"
+            BlueprintName = "ElezioniAmericane"
+            ReferencedContainer = "container:ElezioniAmericane.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F15F457182E1F99009E6F27"
-            BuildableName = "DNA"
-            BlueprintName = "DNA"
-            ReferencedContainer = "container:DNA.xcodeproj">
+            BlueprintIdentifier = "6F38180A182F67FA000AA6D5"
+            BuildableName = "ElezioniAmericane"
+            BlueprintName = "ElezioniAmericane"
+            ReferencedContainer = "container:ElezioniAmericane.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F15F457182E1F99009E6F27"
-            BuildableName = "DNA"
-            BlueprintName = "DNA"
-            ReferencedContainer = "container:DNA.xcodeproj">
+            BlueprintIdentifier = "6F38180A182F67FA000AA6D5"
+            BuildableName = "ElezioniAmericane"
+            BlueprintName = "ElezioniAmericane"
+            ReferencedContainer = "container:ElezioniAmericane.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

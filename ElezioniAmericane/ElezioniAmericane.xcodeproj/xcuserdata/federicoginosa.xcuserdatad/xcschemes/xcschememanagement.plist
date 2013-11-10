@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DNA.xcscheme</key>
+		<key>ElezioniAmericane.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6F15F457182E1F99009E6F27</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6F70BE5E182EB090004667FA</key>
+		<key>6F38180A182F67FA000AA6D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
