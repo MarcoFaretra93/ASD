@@ -13,7 +13,7 @@ int main(int argc, const char * argv[])
         l6  =   NULL,
         l7  =   NULL,
         l8  =   NULL,
-        l9  =   pippo,
+        l9  =   NULL,
         l10 =   NULL,
         l11 =   NULL;
     
