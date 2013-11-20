@@ -84,6 +84,7 @@ int main(int argc, const char * argv[])    {
     stampaStudente(s1);
     deleteStudentePerMedia(&s1, 18);
     stampaStudente(s1);
+    
 }
 
 
