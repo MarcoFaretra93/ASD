@@ -1,0 +1,244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09487EE5183D122000049E66 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 09487EE4183D122000049E66 /* main.c */; };
+		09487EE7183D122000049E66 /* Librerie.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09487EE6183D122000049E66 /* Librerie.1 */; };
+		09487EEF183D131400049E66 /* libri.c in Sources */ = {isa = PBXBuildFile; fileRef = 09487EEE183D131400049E66 /* libri.c */; };
+		09487EF2183D160000049E66 /* librerie.c in Sources */ = {isa = PBXBuildFile; fileRef = 09487EF1183D160000049E66 /* librerie.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09487EDF183D122000049E66 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				09487EE7183D122000049E66 /* Librerie.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09487EE1183D122000049E66 /* Librerie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Librerie; sourceTree = BUILT_PRODUCTS_DIR; };
+		09487EE4183D122000049E66 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		09487EE6183D122000049E66 /* Librerie.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Librerie.1; sourceTree = "<group>"; };
+		09487EED183D123700049E66 /* libri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libri.h; sourceTree = "<group>"; };
+		09487EEE183D131400049E66 /* libri.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libri.c; sourceTree = "<group>"; };
+		09487EF0183D144800049E66 /* librerie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = librerie.h; sourceTree = "<group>"; };
+		09487EF1183D160000049E66 /* librerie.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = librerie.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09487EDE183D122000049E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09487ED8183D122000049E66 = {
+			isa = PBXGroup;
+			children = (
+				09487EE3183D122000049E66 /* Librerie */,
+				09487EE2183D122000049E66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09487EE2183D122000049E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09487EE1183D122000049E66 /* Librerie */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09487EE3183D122000049E66 /* Librerie */ = {
+			isa = PBXGroup;
+			children = (
+				09487EE4183D122000049E66 /* main.c */,
+				09487EF1183D160000049E66 /* librerie.c */,
+				09487EF0183D144800049E66 /* librerie.h */,
+				09487EEE183D131400049E66 /* libri.c */,
+				09487EED183D123700049E66 /* libri.h */,
+				09487EE6183D122000049E66 /* Librerie.1 */,
+			);
+			path = Librerie;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09487EE0183D122000049E66 /* Librerie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09487EEA183D122000049E66 /* Build configuration list for PBXNativeTarget "Librerie" */;
+			buildPhases = (
+				09487EDD183D122000049E66 /* Sources */,
+				09487EDE183D122000049E66 /* Frameworks */,
+				09487EDF183D122000049E66 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Librerie;
+			productName = Librerie;
+			productReference = 09487EE1183D122000049E66 /* Librerie */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09487ED9183D122000049E66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Marco Faretra";
+			};
+			buildConfigurationList = 09487EDC183D122000049E66 /* Build configuration list for PBXProject "Librerie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09487ED8183D122000049E66;
+			productRefGroup = 09487EE2183D122000049E66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09487EE0183D122000049E66 /* Librerie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09487EDD183D122000049E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09487EEF183D131400049E66 /* libri.c in Sources */,
+				09487EF2183D160000049E66 /* librerie.c in Sources */,
+				09487EE5183D122000049E66 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09487EE8183D122000049E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		09487EE9183D122000049E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		09487EEB183D122000049E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09487EEC183D122000049E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09487EDC183D122000049E66 /* Build configuration list for PBXProject "Librerie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09487EE8183D122000049E66 /* Debug */,
+				09487EE9183D122000049E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09487EEA183D122000049E66 /* Build configuration list for PBXNativeTarget "Librerie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09487EEB183D122000049E66 /* Debug */,
+				09487EEC183D122000049E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09487ED9183D122000049E66 /* Project object */;
+}
