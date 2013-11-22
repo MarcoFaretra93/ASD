@@ -23,11 +23,10 @@
 #include <string.h>
 
 int main(int argc, const char * argv[]) {
-    listaLibri l1;
-    listaLibri l2;
-    listaLibrerie n1;
-    libreria lib1;
-    libreria lib2;
+    listaLibri l1=NULL;
+    listaLibri l2=NULL;
+    listaLibrerie n1=NULL;
+    
     string titolo1="Cazzetti";
     string autore1="Marco";
     string titolo2="Fregnette";
@@ -36,6 +35,7 @@ int main(int argc, const char * argv[]) {
     addLibro(&l1, 4, titolo1, autore1, 35);
     stampaLibri(l1);
     addLibro(&l1, 1, titolo2, autore2, 44);
+    
     addLibro(&l2, 1, titolo1, autore1, 35);
     addLibro(&l2, 3, "il grande stronzo", "Alessio", 55);
     printf("%d\n",lengthLibri(l1));
@@ -50,15 +50,5 @@ int main(int argc, const char * argv[]) {
     stampaLibri(l1);
     inserisciCrescente(&n1, 1, 2, "porca eva", "Luca", 88);
     stampaLibrerie(n1);
-    lib1.ID=1;
-    lib1.libri=l1;
-    strcpy(lib1.nome, "biblioteca1");
-    strcpy(lib1.città, "Roma");
-    lib2.ID=4;
-    lib2.libri=l2;
-    strcpy(lib2.nome, "biblioteca2");
-    strcpy(lib2.città, "Milano");
-    printf("%d\n",libriComuniLibrerie(lib1, lib2));
-    printf("%d\n",libriComuniAutore(n1, "Marco"));
     
 }

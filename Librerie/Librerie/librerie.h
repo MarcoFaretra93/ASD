@@ -26,7 +26,7 @@ typedef nodoLibreria* listaLibrerie;
 
 void addLibreria(listaLibrerie*, int, string, string, listaLibri);
 
-listaLibri getLibri(listaLibrerie);
+listaLibri* getLibri(listaLibrerie);
 
 void rimozioneLibroAutore(listaLibrerie*, string);
 

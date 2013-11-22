@@ -21,12 +21,12 @@ void addLibreria(listaLibrerie* l, int id,string nome, string città, listaLibri
     *l=n;
 }
 
-listaLibri getLibri(listaLibrerie l) {
-    return l->info.libri;
+listaLibri* getLibri(listaLibrerie l) {
+    return &(l->info.libri);
 }
 
 void rimozioneLibroAutore(listaLibrerie* l, string autore) {
-    listaLibri temp=getLibri(*l);
+    listaLibri temp=*getLibri(*l);
     listaLibri curr;
     listaLibri prev;
     int dev=0;
@@ -54,17 +54,15 @@ void rimozioneLibroAutore(listaLibrerie* l, string autore) {
 }
 
 void inserisciCrescente(listaLibrerie* l, int id,int idAutore, string titolo,string autore,int prezzo) {
-    listaLibri temp=getLibri(*l);
     listaLibrerie t=*l;
     int dev=0;
     while(t!=NULL && dev==0) {
         if(t->info.ID==id) {
-            inserisciLibroCrescente(&temp, idAutore, titolo, autore, prezzo);
+            inserisciLibroCrescente(getLibri(t), idAutore, titolo, autore, prezzo);
             dev=1;
         }
         t=t->next;
     }
-    (*l)->info.libri=temp;
 }
 
 int libriComuniLibrerie(libreria l1,libreria l2) {
@@ -75,7 +73,7 @@ int libriComuniAutore(listaLibrerie l,string autore) {
     listaLibri temp;
     int risultato=0;
     while(l!=NULL) {
-        temp=getLibri(l);
+        temp=*getLibri(l);
         while(temp!=NULL) {
             if(strcmp(temp->info.autore, autore)==0)
                 risultato++;
