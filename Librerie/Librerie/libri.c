@@ -79,8 +79,14 @@ void inserisciLibroCrescente(listaLibri* l,int id,string titolo,string autore,in
                 n->next=curr;
                 dev=1;
             }
-            else
+            else {
+                prev=curr;
                 curr=curr->next;
+            }
+        }
+        if(dev==0) {
+            prev->next=n;
+            n->next=NULL;
         }
     }
 }

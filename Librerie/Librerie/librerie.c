@@ -26,7 +26,7 @@ listaLibri* getLibri(listaLibrerie l) {
 }
 
 void rimozioneLibroAutore(listaLibrerie* l, string autore) {
-    listaLibri temp=*getLibri(*l);
+    listaLibri temp=(*getLibri(*l));
     listaLibri curr;
     listaLibri prev;
     int dev=0;
@@ -73,7 +73,7 @@ int libriComuniAutore(listaLibrerie l,string autore) {
     listaLibri temp;
     int risultato=0;
     while(l!=NULL) {
-        temp=*getLibri(l);
+        temp=*(getLibri(l));
         while(temp!=NULL) {
             if(strcmp(temp->info.autore, autore)==0)
                 risultato++;
