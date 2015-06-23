@@ -47,7 +47,7 @@ void modificaFile(albero a) {
     else {
         while(fread(bf, sizeof(bloccoFile), 1, fp)>0) {
             if(distanza(bf[0].c1,bf[0].c2,a) != (bf[0].z-48)) {
-                fseek(fp, -sizeof(int), SEEK_CUR);
+                fseek(fp, -sizeof(bloccoFile), SEEK_CUR);
                 bf[0].z=distanza(bf[0].c1, bf[0].c2, a)+48;
                 fwrite(bf, sizeof(bloccoFile), 1, fp);
             }
