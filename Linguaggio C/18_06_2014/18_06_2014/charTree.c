@@ -7,6 +7,7 @@
 //
 
 #include "charTree.h"
+#include "bloccoFile.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,4 +36,22 @@ int distanzaRadice(albero a, char v) {
         return 1+distanzaRadice(a->right, v);
     }
     return 0;
+}
+
+void modificaFile(albero a) {
+    FILE *fp=fopen("/Users/marcofaretra/Desktop/distanze.dat", "rb+");
+    bloccoFile bf[3];
+    if(fp==NULL) {
+        printf("Errore open");
+    }
+    else {
+        while(fread(bf, sizeof(bloccoFile), 1, fp)>0) {
+            if(distanza(bf[0].c1,bf[0].c2,a) != (bf[0].z-48)) {
+                fseek(fp, -sizeof(int), SEEK_CUR);
+                bf[0].z=distanza(bf[0].c1, bf[0].c2, a)+48;
+                fwrite(bf, sizeof(bloccoFile), 1, fp);
+            }
+        }
+    }
+    fclose(fp);
 }

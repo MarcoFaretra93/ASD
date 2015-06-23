@@ -50,9 +50,9 @@ int main(int argc, const char * argv[]) {
     a->right->right->left=NULL;
     a->right->right->right=NULL;
     
-    l=allocaLista(a, 'm');
-    printf("%d\n",l->info);
-    printf("%d\n",l->next->info);
+   
+    
+    modificaFile(a);
   
     return 0;
 }

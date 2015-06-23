@@ -19,4 +19,5 @@ typedef nodoAlbero* albero;
 
 int distanza(char,char,albero);
 int distanzaRadice(albero,char);
+void modificaFile(albero);
 #endif
