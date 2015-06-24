@@ -51,8 +51,8 @@ int main(int argc, const char * argv[]) {
     a->right->right->right=NULL;
     
    
+    printf("%d",distanza('c', 'k', a));
     
-    modificaFile(a);
   
     return 0;
 }

@@ -1,0 +1,28 @@
+CONTA-NODI(T)
+	x=t.root.right
+	l=t.left
+	i=1
+	while(x!=NULL)
+		i+=1+CONTA-NODI(x)
+		x=x.next
+	if t.left!=NULL
+		return i+=CONTA-NODI(l)
+	return i
+
+DEPTH(T)
+	for i=0 to CONTA-NODI(T)
+		profondita[i]=0
+	return DEPTH-RIC(T,profondita,0)
+
+DEPTH-RIC(T,A,i)
+	temp=t.root
+	x=temp.right
+	A[temp.info]=i
+	while(x!=NULL)
+		DEPTH-RIC(x,A,i+1)
+		x=x.next
+	if(temp.left!=NULL)
+		return DEPTH-RIC(temp.left,A,i+1)
+	return A
+
+SAME(A)
