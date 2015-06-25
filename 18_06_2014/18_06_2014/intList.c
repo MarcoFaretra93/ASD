@@ -30,17 +30,15 @@ lista allocaLista(albero a, char v) {
 
 lista allocaListaDaRadice(albero a,int i) {
     lista l=NULL;
-    lista p=NULL;
-    lista q=NULL;
     i++;
     if(a->left==NULL && a->right==NULL) {
         addTesta(&l, i-1);
     }
     if(a->left!=NULL)
-        p=allocaListaDaRadice(a->left,i);
+        l=concat(l,allocaListaDaRadice(a->left,i));
     if(a->right!=NULL)
-        q=allocaListaDaRadice(a->right,i);
-    return concat(concat(l, p),q);
+        l=concat(l,allocaListaDaRadice(a->right,i));
+    return l;
 }
 
 lista concat(lista l1, lista l2) {
@@ -49,4 +47,11 @@ lista concat(lista l1, lista l2) {
         l2=l2->next;
     }
     return l1;
+}
+
+void stampaLista(lista l) {
+    while(l!=NULL) {
+        printf("%d\t",l->info);
+        l=l->next;
+    }
 }

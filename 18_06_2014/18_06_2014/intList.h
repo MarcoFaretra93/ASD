@@ -20,4 +20,5 @@ typedef nodoLista* lista;
 lista allocaLista(albero,char);
 lista allocaListaDaRadice(albero,int);
 lista concat(lista, lista);
+void stampaLista(lista);
 #endif
