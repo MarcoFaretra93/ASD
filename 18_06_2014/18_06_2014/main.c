@@ -48,11 +48,6 @@ int main(int argc, const char * argv[]) {
     a->right->right->info='s';
     a->right->right->left=NULL;
     a->right->right->right=NULL;
-    
-    stampaLista(allocaLista(a, 'm'));
-    
-    
-    
   
     return 0;
 }

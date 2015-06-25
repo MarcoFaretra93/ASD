@@ -12,17 +12,20 @@
 #include <stdlib.h>
 
 int distanza(char v1, char v2, albero a) {
-    if((v1<a->info && v2>a->info) || (v1>a->info && v2<a->info))
+    if(a!=NULL) {
+        if((v1<a->info && v2>a->info) || (v1>a->info && v2<a->info))
+            return 0;
+        if(a->info == v1)
+            return distanzaRadice(a, v2);
+        if(a->info == v2)
+            return distanzaRadice(a, v1);
+        if(a->left!=NULL)
+            return distanza(v1, v2, a->left);
+        if(a->right!=NULL)
+            return distanza(v1, v2, a->right);
         return 0;
-    if(a->info == v1)
-        return distanzaRadice(a, v2);
-    if(a->info == v2)
-        return distanzaRadice(a, v1);
-    if(a->left!=NULL)
-        return distanza(v1, v2, a->left);
-    if(a->right!=NULL)
-        return distanza(v1, v2, a->right);
-    return 0;
+    }
+    else return 0;
 }
 
 int distanzaRadice(albero a, char v) {
