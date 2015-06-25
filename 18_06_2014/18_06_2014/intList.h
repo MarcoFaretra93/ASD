@@ -18,7 +18,8 @@ typedef struct nodoLista{
 typedef nodoLista* lista;
 
 lista allocaLista(albero,char);
-lista allocaListaDaRadice(albero,int);
-lista concat(lista, lista);
+
+void allocaListaDaRadice(albero,int,lista*);
+
 void stampaLista(lista);
 #endif

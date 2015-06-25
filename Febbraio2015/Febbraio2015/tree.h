@@ -8,6 +8,7 @@
 
 #ifndef Febbraio2015_tree_h
 #define Febbraio2015_tree_h
+#include "bloccoFile.h"
 
 typedef struct elem {
     char info;
@@ -24,4 +25,6 @@ int esiste_foglia(albero,char);
 void stampaAlbero(albero);
 
 void somma(albero*,albero);
+
+void modificaFile(albero);
 #endif

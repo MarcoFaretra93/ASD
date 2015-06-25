@@ -53,9 +53,7 @@ int main(int argc, const char * argv[]) {
     a2->right->right->left->left=NULL;
     a2->right->right->left->right=NULL;
     
-    somma(&a, a2);
-    
-    stampaAlbero(a);
+    modificaFile(a2);
     
     return 0;
 }

@@ -24,43 +24,66 @@ void aggiungi(albero* t, char v1, char v2) {
     albero temp=*t;
     albero nodo=malloc(sizeof(nodo_albero));
     nodo->info=v2;
-    if(temp->info == v1) {
-        if(temp->left==NULL) {
-            temp->left=nodo;
-            return;
+    if(temp!=NULL){
+        if(temp->info == v1) {
+            if(temp->left==NULL) {
+                temp->left=nodo;
+                return;
+            }
+            if(temp->right==NULL) {
+                temp->right=nodo;
+                return;
+            }
         }
-        if(temp->right==NULL) {
-            temp->right=nodo;
-            return;
-        }
+        if(temp->left!=NULL)
+            aggiungi(&temp->left, v1, v2);
+        if(temp->right!=NULL)
+            aggiungi(&temp->right, v1, v2);
     }
-    if(temp->left!=NULL)
-        aggiungi(&temp->left, v1, v2);
-    if(temp->right!=NULL)
-        aggiungi(&temp->right, v1, v2);
 }
 
 void stampaAlbero(albero a) {
-    printf("%c\t",a->info);
-    if(a->left!=NULL)
-        stampaAlbero(a->left);
-    if(a->right!=NULL)
-        stampaAlbero(a->right);
+    if(a!=NULL) {
+        printf("%c\t",a->info);
+        if(a->left!=NULL)
+            stampaAlbero(a->left);
+        if(a->right!=NULL)
+            stampaAlbero(a->right);
+    }
+    else printf("Albero vuoto");
 }
 
 void somma(albero* t1,albero t2) {
-    if(t2->left!=NULL)
-        somma(t1, t2->left);
+    if(t2!=NULL) {
+        if(t2->left!=NULL)
+            somma(t1, t2->left);
     
-    if(t2->right!=NULL)
-        somma(t1, t2->right);
+        if(t2->right!=NULL)
+            somma(t1, t2->right);
     
-    if(esiste_foglia(*t1, t2->info)) {
-        if(t2->left!=NULL) {
-            aggiungi(t1, t2->info, t2->left->info);
+        if(esiste_foglia(*t1, t2->info)) {
+            if(t2->left!=NULL) {
+                aggiungi(t1, t2->info, t2->left->info);
+            }
+            if(t2->right!=NULL) {
+                aggiungi(t1, t2->info, t2->right->info);
+            }
         }
-        if(t2->right!=NULL) {
-            aggiungi(t1, t2->info, t2->right->info);
+    }
+}
+
+void modificaFile(albero a) {
+    FILE *f;
+    bloccoFile b=malloc(sizeof(bloccoFile));
+    f=fopen("/Users/marcofaretra/Desktop/nodi.dat", "rb+");
+    if(f==NULL) printf("Errore accesso file");
+    else {
+        while(fread(b, sizeof(blocco), 1, f)>0) {
+            if(esiste_foglia(a, b->x)!=b->y) {
+                fseek(f, -sizeof(blocco), SEEK_CUR);
+                b->y=esiste_foglia(a, b->x);
+                fwrite(b, sizeof(blocco), 1, f);
+            }
         }
     }
 }

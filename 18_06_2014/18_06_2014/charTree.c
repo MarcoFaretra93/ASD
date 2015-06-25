@@ -53,7 +53,6 @@ void modificaFile(albero a) {
                 fwrite(bf, sizeof(bloccoFile), 1, fp);
             }
             pos=ftell(fp);
-            printf("%d",pos);
         }
     }
     fclose(fp);

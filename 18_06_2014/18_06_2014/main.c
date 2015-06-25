@@ -12,7 +12,6 @@
 
 
 int main(int argc, const char * argv[]) {
-    lista l;
     albero a = malloc(sizeof(nodoAlbero));
     a->info='k';
     
@@ -50,7 +49,8 @@ int main(int argc, const char * argv[]) {
     a->right->right->left=NULL;
     a->right->right->right=NULL;
     
-    modificaFile(a);
+    stampaLista(allocaLista(a, 'm'));
+    
     
     
   

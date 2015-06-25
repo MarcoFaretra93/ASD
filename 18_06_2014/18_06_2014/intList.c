@@ -19,34 +19,30 @@ void addTesta(lista* l, int i) {
 }
 
 lista allocaLista(albero a, char v) {
-    if(a->info==v)
-        return allocaListaDaRadice(a, 0);
-    if(a->left!=NULL && a->info>v)
-        return allocaLista(a->left, v);
-    if(a->right!=NULL && a->info<v)
-        return allocaLista(a->right, v);
-    return NULL;
+    lista l=NULL;
+    if(a!=NULL) {
+        if(a->info==v) {
+            allocaListaDaRadice(a, 0, &l);
+            return l;
+        }
+        if(a->left!=NULL && a->info>v)
+            return allocaLista(a->left, v);
+        if(a->right!=NULL && a->info<v)
+            return allocaLista(a->right, v);
+        return NULL;
+    }
+    else return NULL;
 }
 
-lista allocaListaDaRadice(albero a,int i) {
-    lista l=NULL;
+void allocaListaDaRadice(albero a,int i,lista* l) {
     i++;
     if(a->left==NULL && a->right==NULL) {
-        addTesta(&l, i-1);
+        addTesta(l, i-1);
     }
     if(a->left!=NULL)
-        l=concat(l,allocaListaDaRadice(a->left,i));
+        allocaListaDaRadice(a->left,i,l);
     if(a->right!=NULL)
-        l=concat(l,allocaListaDaRadice(a->right,i));
-    return l;
-}
-
-lista concat(lista l1, lista l2) {
-    while(l2!=NULL) {
-        addTesta(&l1, l2->info);
-        l2=l2->next;
-    }
-    return l1;
+        allocaListaDaRadice(a->right,i,l);
 }
 
 void stampaLista(lista l) {

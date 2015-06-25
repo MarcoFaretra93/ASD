@@ -10,27 +10,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void addTesta(listaInteri* l, int n) {
+void addCoda(listaInteri* l, int n) {
+    listaInteri temp=*l;
     listaInteri nodo=malloc(sizeof(nodoLista));
     nodo->info=n;
-    nodo->next=*l;
-    *l=nodo;
+    nodo->next=NULL;
+    if(temp==NULL) {
+        *l=nodo;
+    }
+    else {
+        while(temp->next!=NULL)
+            temp=temp->next;
+        temp->next=nodo;
+    }
 }
 
 listaInteri allocaLista(albero t,int v) {
-    return allocaListaRic(t, v, 0);
+    listaInteri l=NULL;
+    if(t!=NULL) {
+        allocaListaRic(t, v, 0, &l);
+        return l;
+    }
+    else
+        return NULL;
 }
 
-listaInteri allocaListaRic(albero t,int v, int i) {
-    listaInteri l = NULL;
+void allocaListaRic(albero t,int v, int i,listaInteri* l) {
     if(i==v) {
-        addTesta(&l,t->info);
+        addCoda(l,t->info);
     }
     if(t->left!=NULL)
-        l=concat(l,allocaListaRic(t->left, v, i+1));
+        allocaListaRic(t->left, v, i+1,l);
     if(t->right!=NULL)
-        l=concat(l,allocaListaRic(t->right, v, i+1));
-    return l;
+        allocaListaRic(t->right, v, i+1,l);
 }
 
 void stampaLista(listaInteri l) {
@@ -39,15 +51,6 @@ void stampaLista(listaInteri l) {
         l=l->next;
     }
 }
-
-listaInteri concat(listaInteri l1,listaInteri l2) {
-    while(l2!=NULL) {
-        addTesta(&l1, l2->info);
-        l2=l2->next;
-    }
-    return l1;
-}
-
 
 int verificaLivelli(albero a1,albero a2,int v) {
     listaInteri l1 = allocaLista(a1, v);

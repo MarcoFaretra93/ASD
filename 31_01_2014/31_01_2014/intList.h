@@ -19,17 +19,16 @@ typedef nodoLista* listaInteri;
 
 listaInteri allocaLista(albero,int);
 
-void addTesta(listaInteri* , int);
+void addCoda(listaInteri* , int);
 
-listaInteri allocaListaRic(albero,int, int);
+void allocaListaRic(albero,int, int,listaInteri*);
 
 void stampaLista(listaInteri);
-
-listaInteri concat(listaInteri,listaInteri);
 
 int verificaLivelli(albero ,albero,int);
 
 int contain(listaInteri, int);
+
 int lungLista(listaInteri);
 
 void modificaFile(albero);
