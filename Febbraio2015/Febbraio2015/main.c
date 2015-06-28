@@ -53,7 +53,11 @@ int main(int argc, const char * argv[]) {
     a2->right->right->left->left=NULL;
     a2->right->right->left->right=NULL;
     
-    modificaFile(a2);
+    stampaAlberoPreOrder(a);
+    printf("\n");
+    stampaAlberoPostOrder(a);
+    printf("\n");
+    stampaAlberoInOrder(a);
     
     return 0;
 }

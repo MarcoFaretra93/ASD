@@ -85,5 +85,6 @@ int main(int argc, const char * argv[]) {
     a2->right->right->right->left=NULL;
     a2->right->right->right->right=NULL;
     
+    
     return 0;
 }

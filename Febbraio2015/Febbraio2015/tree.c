@@ -42,15 +42,35 @@ void aggiungi(albero* t, char v1, char v2) {
     }
 }
 
-void stampaAlbero(albero a) {
+void stampaAlberoPreOrder(albero a) {
     if(a!=NULL) {
         printf("%c\t",a->info);
         if(a->left!=NULL)
-            stampaAlbero(a->left);
+            stampaAlberoPreOrder(a->left);
         if(a->right!=NULL)
-            stampaAlbero(a->right);
+            stampaAlberoPreOrder(a->right);
     }
     else printf("Albero vuoto");
+}
+
+void stampaAlberoPostOrder(albero a) {
+    if(a!=NULL) {
+        if(a->left!=NULL)
+            stampaAlberoPostOrder(a->left);
+        if(a->right!=NULL)
+            stampaAlberoPostOrder(a->right);
+        printf("%c\t",a->info);
+    }
+}
+
+void stampaAlberoInOrder(albero a) {
+    if(a!=NULL) {
+        if(a->left!=NULL)
+            stampaAlberoInOrder(a->left);
+        printf("%c\t",a->info);
+        if(a->right!=NULL)
+            stampaAlberoInOrder(a->right);
+    }
 }
 
 void somma(albero* t1,albero t2) {

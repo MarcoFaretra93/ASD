@@ -22,7 +22,11 @@ void aggiungi(albero*,char,char);
 
 int esiste_foglia(albero,char);
 
-void stampaAlbero(albero);
+void stampaAlberoPreOrder(albero);
+
+void stampaAlberoPostOrder(albero);
+
+void stampaAlberoInOrder(albero);
 
 void somma(albero*,albero);
 
