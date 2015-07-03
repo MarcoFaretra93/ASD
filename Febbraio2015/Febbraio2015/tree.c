@@ -94,16 +94,19 @@ void somma(albero* t1,albero t2) {
 
 void modificaFile(albero a) {
     FILE *f;
-    bloccoFile b=malloc(sizeof(bloccoFile));
+    blocco b;
+    long pos=0;
     f=fopen("/Users/marcofaretra/Desktop/nodi.dat", "rb+");
     if(f==NULL) printf("Errore accesso file");
     else {
-        while(fread(b, sizeof(blocco), 1, f)>0) {
-            if(esiste_foglia(a, b->x)!=b->y) {
-                fseek(f, -sizeof(blocco), SEEK_CUR);
-                b->y=esiste_foglia(a, b->x);
-                fwrite(b, sizeof(blocco), 1, f);
+        while(fread(&b, sizeof(blocco), 1, f)>0) {
+            if(esiste_foglia(a, b.x)!=b.y) {
+                fseek(f, pos, SEEK_SET);
+                b.y=esiste_foglia(a, b.x);
+                fwrite(&b, sizeof(blocco), 1, f);
             }
+            pos=ftell(f);
         }
     }
+    fclose(f);
 }

@@ -29,14 +29,17 @@ int distanza(char v1, char v2, albero a) {
 }
 
 int distanzaRadice(albero a, char v) {
-    if(a->info == v) {
+    if(a!=NULL) {
+        if(a->info == v) {
+            return 0;
+        }
+        if(a->info > v) {
+            return 1+distanzaRadice(a->left, v);
+        }
+        if(a->info < v) {
+            return 1+distanzaRadice(a->right, v);
+        }
         return 0;
-    }
-    if(a->info > v) {
-        return 1+distanzaRadice(a->left, v);
-    }
-    if(a->info < v) {
-        return 1+distanzaRadice(a->right, v);
     }
     return 0;
 }

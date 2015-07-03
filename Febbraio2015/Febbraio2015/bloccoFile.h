@@ -9,10 +9,9 @@
 #ifndef Febbraio2015_bloccoFile_h
 #define Febbraio2015_bloccoFile_h
 
-typedef struct blocco{
+typedef struct nodoBlocco{
     char x;
     int y;
 }blocco;
 
-typedef blocco* bloccoFile;
 #endif

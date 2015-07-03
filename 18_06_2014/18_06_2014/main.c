@@ -49,5 +49,6 @@ int main(int argc, const char * argv[]) {
     a->right->right->left=NULL;
     a->right->right->right=NULL;
   
+    printf("%d",distanza('k', 'e',a));
     return 0;
 }
