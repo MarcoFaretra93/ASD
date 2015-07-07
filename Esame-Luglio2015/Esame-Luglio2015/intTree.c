@@ -85,3 +85,21 @@ int max(int a1,int a2) {
         return a2;
 }
 
+
+void modificaFile(albero T) {
+    FILE* f=fopen("/Users/marcofaretra/Desktop/livelli.dat", "rb+");
+    long pos = SEEK_SET;
+    blocco b;
+    if(f==NULL) printf("Errore");
+    else {
+        while(fread(&b, sizeof(blocco), 1, f)>0) {
+            if(b.y!=conta_livello(T, b.x)) {
+                fseek(f, pos, SEEK_SET);
+                b.y=conta_livello(T, b.x);
+                fwrite(&b, sizeof(blocco), 1, f);
+            }
+            pos=ftell(f);
+        }
+    }
+}
+

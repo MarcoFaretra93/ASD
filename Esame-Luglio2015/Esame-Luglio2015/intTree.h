@@ -17,6 +17,11 @@ typedef struct nodoAlbero {
 
 typedef nodoAlbero* albero;
 
+typedef struct blocco {
+    int x;
+    int y;
+}blocco;
+
 int conta_livello(albero,int);
 
 int* creaArray(albero,int);
@@ -28,4 +33,5 @@ int confrontaArray(int*,int*,int,int);
 int confronta_alberi(albero,albero);
 int altezza(albero);
 int max(int,int);
+void modificaFile(albero);
 #endif

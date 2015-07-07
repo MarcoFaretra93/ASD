@@ -68,6 +68,7 @@ int main(int argc, const char * argv[]) {
     a2->dx->dx->info=5;
     a2->dx->dx->sx=NULL;
     a2->dx->dx->dx=NULL;
+    modificaFile(a);
     
     return 0;
 }
