@@ -255,8 +255,6 @@ DFS-VISIT(A,i,color)
 			DFS-VISIT(A,v,color)
 	color[i]=2
 
-//Quella dell'ordine è na pezza non la so fare
-
 ADD-TESTA(l,u)
 	nodo.info=u
 	nodo.prev=NULL

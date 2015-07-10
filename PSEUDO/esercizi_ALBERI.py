@@ -187,8 +187,7 @@ PARENTELA(t,n1,n2) //ma se usiamo cammino??, errore nel testo non mette t, ma ci
 	else 
 		return x2-x1
 
-//ALBERI DI GRADO QUALSIASI (questi sono sottoposti a più errori, ditemeli se li trovate)
-//HO CAPITO CHE STI CAZZO DE ALBERI, ESSENDO FIGLIO SINISTRO FRATELLO DESTRO, POSSONO ESSERE BENISSIMO TRATTATI //COME BINARI, CAMBIA QUASI NIENTE
+//ALBERI DI GRADO QUALSIASI
 
 CONTA-NODI(t) //figlio sinistro-fratello destro
 	if t==NULL 
