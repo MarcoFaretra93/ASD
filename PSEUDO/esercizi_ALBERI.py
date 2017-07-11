@@ -145,7 +145,7 @@ POTA-RIC(t,h,i)
 POTA(t,h) //cancello tutti i nodi a profondità maggiore di h
 	POTA-RIC(t,h,0)
 
-VALORE-NONNO(t) //un po' astratta, ma praticamente devo verificare che t.info=t.parent.parent.info
+VALORE-NONNO(t) 
 	if(t!=NULL)
 		if t.parent.parent!=NULL && t.info=t.parent.parent.info
 			cont++
@@ -161,7 +161,7 @@ DUE-FIGLI(t)
 	else 
 		return 0
 
-QUATTRO-NIPOTI(t) //so tutti uguali dio bono
+QUATTRO-NIPOTI(t)
 	if t!=NULL
 		if t.left.left!=NULL && t.left.right!=NULL && t.right.left!=NULL && t.right.right!=NULL
 			cont++
@@ -179,7 +179,7 @@ CAMMINO(t, n) //ritorno una lista con un cammino, differentemente da quello sopr
 	else 
 		return l
 		
-PARENTELA(t,n1,n2) //ma se usiamo cammino??, errore nel testo non mette t, ma ci deve essere per forza
+PARENTELA(t,n1,n2)
 	x1=CAMMINO(t,n1)
 	x2=CAMMINO(t,n2)
 	if(x1>x2)
